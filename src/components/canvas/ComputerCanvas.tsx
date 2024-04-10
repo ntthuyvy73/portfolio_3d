@@ -2,13 +2,16 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 import { Loader } from "..";
+import useIsMobile from "../../hooks/useIsMobile";
 
 const Computer = () => {
+    const isMobile = useIsMobile();
+
     const computer = useGLTF("./desktop_pc/scene.gltf");
     return (
         <mesh>
             <hemisphereLight intensity={1} groundColor="white" />
-            {/* 
+
             <spotLight
                 position={[-20, 50, 10]}
                 angle={0.12}
@@ -18,11 +21,11 @@ const Computer = () => {
                 shadow-mapSize={1024}
             />
 
-            <pointLight intensity={1} /> */}
+            <pointLight intensity={1} />
 
             <primitive
                 object={computer.scene}
-                scale={0.75}
+                scale={!isMobile ? 0.75 : 0.5}
                 position={[0, -3.25, -1.5]}
             />
         </mesh>

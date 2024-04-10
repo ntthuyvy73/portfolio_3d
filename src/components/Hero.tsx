@@ -3,7 +3,7 @@ import { ComputerCanvas } from "./canvas";
 
 const Hero = () => {
     return (
-        <section className="w-full relative h-screen ">
+        <section className="w-full relative h-screen  ">
             <div className="padding-x absolute inset-0 top-40 max-w-7xl mx-auto flex items-start  ">
                 {/*timeline  */}
                 <div className="flex flex-col items-center">
