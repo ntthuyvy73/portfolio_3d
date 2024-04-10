@@ -4,7 +4,7 @@ import { ComputerCanvas } from "./canvas";
 const Hero = () => {
     return (
         <section className="w-full relative h-screen flex flex-col ">
-            <div className="padding-x absolute inset-0 top-40 max-w-7xl mx-auto flex items-start  ">
+            <div className="padding-x absolute inset-0 xl:top-40 top-20 max-w-7xl mx-auto flex items-start  ">
                 {/*timeline  */}
                 <div className="flex flex-col items-center">
                     <div className="w-4 h-4 rounded-full bg-purple" />
