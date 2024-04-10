@@ -8,7 +8,7 @@ const Hero = () => {
                 {/*timeline  */}
                 <div className="flex flex-col items-center">
                     <div className="w-4 h-4 rounded-full bg-purple" />
-                    <div className="w-1 h-60 sm:h-30 violet-gradient" />
+                    <div className="w-1 h-32 xl:h-40 violet-gradient" />
                 </div>
                 {/* info */}
                 <div>
