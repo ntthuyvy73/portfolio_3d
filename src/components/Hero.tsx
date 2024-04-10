@@ -3,12 +3,12 @@ import { ComputerCanvas } from "./canvas";
 
 const Hero = () => {
     return (
-        <section className="w-full relative h-screen  ">
+        <section className="w-full relative h-screen flex flex-col ">
             <div className="padding-x absolute inset-0 top-40 max-w-7xl mx-auto flex items-start  ">
                 {/*timeline  */}
                 <div className="flex flex-col items-center">
                     <div className="w-4 h-4 rounded-full bg-purple" />
-                    <div className="w-1 h-80 sm:h-40 violet-gradient" />
+                    <div className="w-1 h-60 sm:h-30 violet-gradient" />
                 </div>
                 {/* info */}
                 <div>
@@ -23,6 +23,7 @@ const Hero = () => {
             </div>
 
             {/* computer */}
+
             <ComputerCanvas />
 
             {/* scroll about */}
