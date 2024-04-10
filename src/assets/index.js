@@ -32,6 +32,8 @@ import tripguide from "./tripguide.png";
 
 import sql from "./sql.jpg";
 import dotnet from "./dotnet.png";
+import backbone from "./backbone.png";
+import tortoiseSVN from "./tortoiseSVN.jpg";
 
 export {
     logo,
@@ -64,4 +66,6 @@ export {
     tripguide,
     sql,
     dotnet,
+    backbone,
+    tortoiseSVN,
 };

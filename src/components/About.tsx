@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-import SectionWrapper from "./SectionWrapper";
+import SectionWrapper from "./wrapper/SectionWrapper";
 import { fadeIn, textVariant } from "../utils/motion";
 import { services } from "../constants";
 import { ServiceCard } from ".";

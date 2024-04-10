@@ -25,6 +25,8 @@ import {
     threejs,
     dotnet,
     sql,
+    backbone,
+    tortoiseSVN,
 } from "../assets";
 
 export const navLinks = [
@@ -35,6 +37,10 @@ export const navLinks = [
     {
         id: "work",
         title: "Work",
+    },
+    {
+        id: "projects",
+        title: "Projects",
     },
     {
         id: "contact",
@@ -76,12 +82,12 @@ const technologies = [
         icon: typescript,
     },
     {
-        name: "React JS",
+        name: "React JS/Nexet JS",
         icon: reactjs,
     },
     {
-        name: "Redux Toolkit",
-        icon: redux,
+        name: "Backbone",
+        icon: backbone,
     },
     {
         name: "Tailwind CSS",
@@ -91,79 +97,89 @@ const technologies = [
         name: "Node JS",
         icon: nodejs,
     },
-    {
-        name: "MongoDB",
-        icon: mongodb,
-    },
+
     {
         name: "Three JS",
         icon: threejs,
+    },
+    {
+        name: ".NET (ASP.NET, .NET Core, WPF)",
+        icon: dotnet,
+    },
+    {
+        name: "Micrsoft SQL server",
+        icon: sql,
+    },
+
+    {
+        name: "figma",
+        icon: figma,
     },
     {
         name: "git",
         icon: git,
     },
     {
-        name: "figma",
-        icon: figma,
-    },
-    {
-        name: "docker",
-        icon: docker,
+        name: "Tortoise SVN",
+        icon: tortoiseSVN,
     },
 ];
 
 const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
-        iconBg: "#383E56",
-        date: "March 2020 - April 2021",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "React Native Developer",
-        company_name: "Tesla",
+        title: "IT",
+        company_name: "Ton Duc Thang",
         icon: tesla,
         iconBg: "#E6DEDD",
-        date: "Jan 2021 - Feb 2022",
+        date: "Jan 2012 - 2013",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Support and consult for custome requirements",
+            "Coding by .NET winform, webform by MVC pattern.",
+            "Using SQL server",
+            "Update new technologies, solutions and report to manager",
         ],
     },
     {
         title: "Web Developer",
-        company_name: "Shopify",
-        icon: shopify,
+        company_name: "Ton Duc Thang",
+        icon: web,
         iconBg: "#383E56",
-        date: "Jan 2022 - Jan 2023",
+        date: "Jan 2013 - Jan 2015",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Build the website of Course Registration",
+            "Analysis requirements & Design Database",
+            "Coding by ASP.NET.",
+            "Using SQL server to manage data",
+            "Using HTML, CSS",
         ],
     },
     {
-        title: "Full stack Developer",
-        company_name: "Meta",
+        title: "Fullstack Developer",
+        company_name: "Ton Duc Thang",
         icon: meta,
+        iconBg: "#383E56",
+        date: "Jan 2015 - Present",
+        points: [
+            "Build the software to manage mark, course of student",
+            "Build the software to manage leturers",
+            "Build the website of lecturer ",
+            "Build the website of enrollment ",
+
+            "Coding by .NET core.",
+            "Using SQL server to manage data",
+            "Using HTML, CSS, javascript, backbone",
+        ],
+    },
+    {
+        title: "ReactJS/NextJS Developer",
+        company_name: "Freelancer",
+        icon: reactjs,
         iconBg: "#E6DEDD",
         date: "Jan 2023 - Present",
         points: [
             "Developing and maintaining web applications using React.js and other related technologies.",
             "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
             "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
         ],
     },
 ];
@@ -203,61 +219,178 @@ const projects = [
         tags: [
             {
                 name: "react",
-                color: "blue-text-gradient",
+                color: "green-background",
             },
             {
                 name: "mongodb",
-                color: "green-text-gradient",
+                color: "pink-background ",
             },
             {
                 name: "tailwind",
-                color: "pink-text-gradient",
+                color: "violet-background",
             },
         ],
         image: carrent,
         source_code_link: "https://github.com/",
     },
     {
-        name: "Job IT",
-        description:
-            "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        name: "Clone Youtube",
+        description: "Clone similar youtube",
         tags: [
             {
                 name: "react",
-                color: "blue-text-gradient",
+                color: "green-background",
             },
             {
                 name: "restapi",
-                color: "green-text-gradient",
+                color: "pink-background ",
             },
             {
                 name: "scss",
-                color: "pink-text-gradient",
+                color: "violet-background",
             },
         ],
         image: jobit,
         source_code_link: "https://github.com/",
     },
     {
-        name: "Trip Guide",
-        description:
-            "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        name: "Enrollment",
+        description: "Pupils register major for university.",
         tags: [
             {
-                name: "nextjs",
-                color: "blue-text-gradient",
+                name: ".net",
+                color: "green-background",
             },
             {
-                name: "supabase",
-                color: "green-text-gradient",
+                name: "backbone",
+                color: "pink-background ",
             },
             {
-                name: "css",
-                color: "pink-text-gradient",
+                name: "bootstrap",
+                color: "violet-background",
+            },
+            {
+                name: "javascript",
+                color: "violet-background",
             },
         ],
         image: tripguide,
-        source_code_link: "https://github.com/",
+        source_code_link: "",
+    },
+
+    {
+        name: "Registration Course",
+        description: "Student register subject and application for manager",
+        tags: [
+            {
+                name: ".net",
+                color: "green-background",
+            },
+            {
+                name: "sql",
+                color: "pink-background ",
+            },
+            {
+                name: "css",
+                color: "violet-background",
+            },
+            {
+                name: "javascript",
+                color: "violet-background",
+            },
+        ],
+        image: tripguide,
+        source_code_link: "",
+    },
+
+    {
+        name: "Manage Course Program",
+        description:
+            "Application for manager manage data of student, courses, finacial",
+        tags: [
+            {
+                name: "wpf",
+                color: "green-background",
+            },
+            {
+                name: "wpf",
+                color: "green-background",
+            },
+            {
+                name: "sql",
+                color: "pink-background ",
+            },
+            {
+                name: "css",
+                color: "violet-background",
+            },
+            {
+                name: "javascript",
+                color: "violet-background",
+            },
+        ],
+        image: tripguide,
+        source_code_link: "",
+    },
+
+    {
+        name: "Student Portal",
+        description: "Website of student",
+        tags: [
+            {
+                name: ".net core",
+                color: "green-background",
+            },
+
+            {
+                name: "sql",
+                color: "pink-background ",
+            },
+            {
+                name: "html",
+                color: "violet-background",
+            },
+            {
+                name: "css",
+                color: "violet-background",
+            },
+            {
+                name: "javascript",
+                color: "violet-background",
+            },
+        ],
+        image: tripguide,
+        source_code_link: "",
+    },
+
+    {
+        name: "Teacher Portal",
+        description: "Website of teacher",
+        tags: [
+            {
+                name: ".net core",
+                color: "green-background",
+            },
+
+            {
+                name: "sql",
+                color: "pink-background ",
+            },
+            {
+                name: "html",
+                color: "violet-background",
+            },
+            {
+                name: "css",
+                color: "violet-background",
+            },
+            {
+                name: "javascript",
+                color: "violet-background",
+            },
+        ],
+        image: tripguide,
+        source_code_link: "",
     },
 ];
 

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 
-import SectionWrapper from "./SectionWrapper";
+import SectionWrapper from "./wrapper/SectionWrapper";
 import { textVariant } from "../utils/motion";
 import { experiences } from "../constants";
 import { ExperienceCard } from ".";

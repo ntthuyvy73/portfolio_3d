@@ -34,7 +34,7 @@
 }
 
 .p-text {
-    @apply text-xl leading-[30px] text-left text-secondary w-full;
+    @apply text-xl leading-[30px] text-left text-secondary w-full text-justify;
 }
 
 .black-gradient {
@@ -65,6 +65,18 @@
     background: "#00cea8";
     background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
     background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+}
+
+.pink-background {
+    background: #ec008c; /* fallback for old browsers */
+}
+
+.green-background {
+    background: #00cea8; /* fallback for old browsers */
+}
+
+.violet-background {
+    background: #804dee; /* fallback for old browsers */
 }
 
 .canvas-loader {
