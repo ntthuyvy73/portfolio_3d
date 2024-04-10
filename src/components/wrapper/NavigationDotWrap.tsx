@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { LinkContext } from "../../utils";
 
 const NavigationDotWrap = () => {
-    const { activeLink, setActiveLink } = useContext(LinkContext);
+    const context = useContext(LinkContext);
 
     return (
         <div className="flex flex-col gap-7">
@@ -14,11 +14,13 @@ const NavigationDotWrap = () => {
                         key={`navgiation-${index}`}
                         href={`#${item.id}`}
                         className={`w-5 h-5  rounded-full hover:bg-secondary transition-all duration-100 ease-in-out ${
-                            item.id === activeLink ? "bg-purple" : "bg-white"
+                            item.id === context?.activeLink
+                                ? "bg-purple"
+                                : "bg-white"
                         }`}
                         data-tooltip-id={`tooltip-nav-${item.id}`}
                         data-tooltip-content={item.title}
-                        onClick={() => setActiveLink(item.id)}
+                        onClick={() => context?.setActiveLink(item.id)}
                     />
                     <Tooltip
                         id={`tooltip-nav-${item.id}`}

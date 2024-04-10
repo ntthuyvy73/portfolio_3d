@@ -9,9 +9,14 @@ type ExperienceCardProps = {
     points: string[];
 };
 
-const ExperienceCard = ({ experience }: ExperienceCardProps) => {
-    const { title, company_name, icon, iconBg, date, points } = experience;
-
+const ExperienceCard = ({
+    title,
+    company_name,
+    icon,
+    //    iconBg,
+    date,
+    points,
+}: ExperienceCardProps) => {
     return (
         <VerticalTimelineElement
             contentStyle={{ background: "#1d1836", color: "text-white" }}
@@ -37,7 +42,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
                 </p>
 
                 <ul className="list-disc ml-5 mt-3">
-                    {points.map((item, index) => (
+                    {points?.map((item, index) => (
                         <li
                             key={`point-${index}`}
                             className="mt-2 text-justify text-[14px] tracking-wider "

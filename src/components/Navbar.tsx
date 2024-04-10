@@ -8,7 +8,7 @@ import { LinkContext } from "../utils";
 const Navbar = () => {
     const [toggle, setToggle] = useState(false);
     const [scrolled, setScrolled] = useState(false);
-    const { activeLink, setActiveLink } = useContext(LinkContext);
+    const context = useContext(LinkContext);
 
     const handleScroll = () => {
         const scrollTop = window.scrollY;
@@ -32,7 +32,7 @@ const Navbar = () => {
                     to="/"
                     className="flex items-center"
                     onClick={() => {
-                        setActiveLink("");
+                        context?.setActiveLink("");
                         window.scroll(0, 0);
                     }}
                 >
@@ -55,11 +55,11 @@ const Navbar = () => {
                         <li
                             key={`li-${index}`}
                             className={`font-medium text-[18px] hover:text-purple  ${
-                                activeLink === item.id
+                                context?.activeLink === item.id
                                     ? "text-purple"
                                     : "text-secondary"
                             }`}
-                            onClick={() => setActiveLink(item.id)}
+                            onClick={() => context?.setActiveLink(item.id)}
                         >
                             <a href={`#${item.id}`}>{item.title}</a>
                         </li>
@@ -84,13 +84,13 @@ const Navbar = () => {
                                     <li
                                         key={`li-${index}`}
                                         className={`font-medium text-[18px] hover:text-purple  ${
-                                            activeLink === item.id
+                                            context?.activeLink === item.id
                                                 ? "text-purple"
                                                 : "text-secondary"
                                         }`}
                                         onClick={() => {
                                             setToggle(!toggle);
-                                            setActiveLink(item.id);
+                                            context?.setActiveLink(item.id);
                                         }}
                                     >
                                         <a href={`#${item.id}`}>{item.title}</a>

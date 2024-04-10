@@ -15,7 +15,7 @@ const Tech = () => {
                         data-tooltip-id={`my-tooltip-${index}`}
                         data-tooltip-content={item.name}
                     >
-                        <BallCanvas {...item} />
+                        <BallCanvas icon={item.icon} />
                     </div>
 
                     <Tooltip

@@ -15,7 +15,12 @@ export const textVariant = () => {
     };
 };
 
-export const fadeIn = (direction, type, delay, duration) => {
+export const fadeIn = (
+    direction: string,
+    type: string,
+    delay: number,
+    duration: number
+) => {
     return {
         hidden: {
             x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
@@ -36,7 +41,12 @@ export const fadeIn = (direction, type, delay, duration) => {
     };
 };
 
-export const slideIn = (direction, type, delay, duration) => {
+export const slideIn = (
+    direction: string,
+    type: string,
+    delay: number,
+    duration: number
+) => {
     return {
         hidden: {
             x:

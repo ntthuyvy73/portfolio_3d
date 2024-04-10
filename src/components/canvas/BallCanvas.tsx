@@ -1,6 +1,5 @@
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
-import { Tooltip } from "react-tooltip";
 import { Loader } from "..";
 import {
     Decal,
@@ -10,12 +9,12 @@ import {
     useTexture,
 } from "@react-three/drei";
 
-type BallCanvasProps = {
-    name: string;
-    icon: any;
-};
+// type BallCanvasProps = {
+//     name: string;
+//     icon: any;
+// };
 
-const Ball = ({ name, icon }: BallCanvasProps) => {
+const Ball = ({ icon }: any) => {
     const [decal] = useTexture([icon]);
     return (
         <>
@@ -42,12 +41,12 @@ const Ball = ({ name, icon }: BallCanvasProps) => {
     );
 };
 
-const BallCanvas = ({ name, icon }: BallCanvasProps) => {
+const BallCanvas = ({ icon }: any) => {
     return (
         <Canvas frameloop="demand" gl={{ preserveDrawingBuffer: true }}>
             <Suspense fallback={<Loader />}>
                 <OrbitControls enableZoom={false} />
-                <Ball name={name} icon={icon} />
+                <Ball icon={icon} />
             </Suspense>
             <Preload all />
         </Canvas>

@@ -1,5 +1,4 @@
 import { Tilt } from "react-tilt";
-import { motion } from "framer-motion";
 
 import { github } from "../assets";
 
@@ -17,9 +16,14 @@ type ProjectCardProps = {
     source_code_link: string;
 };
 
-const ProjectCard = ({ project }: ProjectCardProps) => {
-    const { index, name, description, tags, image, source_code_link } = project;
-
+const ProjectCard = ({
+    //index,
+    name,
+    description,
+    tags,
+    image,
+    source_code_link,
+}: ProjectCardProps) => {
     return (
         <Tilt className="bg-tertiary sm:w-[300px] w-full rounded-2xl relative">
             <div className="w-full h-[230px]">

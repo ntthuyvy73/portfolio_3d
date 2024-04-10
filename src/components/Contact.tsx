@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { fadeIn, slideIn } from "../utils/motion";
+import { slideIn } from "../utils/motion";
 import SectionWrapper from "./wrapper/SectionWrapper";
 import { EarthCanvas } from "./canvas";
 
@@ -15,12 +15,12 @@ const Contact = () => {
         message: "",
     });
 
-    const handleChange = (e) => {
+    const handleChange = (e: any) => {
         const { name, value } = e.target;
         setForm({ ...form, [name]: value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: any) => {
         e.preventDefault();
 
         setIsLoading(true);
@@ -60,7 +60,11 @@ const Contact = () => {
                 <p className="sub-text">Get in touch</p>
                 <h2 className="head-text">Contact</h2>
 
-                <form ref={formRef} onSubmit={handleSubmit} className="mt-10">
+                <form
+                    ref={formRef.current}
+                    onSubmit={handleSubmit}
+                    className="mt-10"
+                >
                     <label className="flex flex-col gap-5 font-medium">
                         <span>Your Name</span>
                         <input
