@@ -1,12 +1,15 @@
 import { motion } from "framer-motion";
 import SocialWrapper from "./SocialWrapper";
 import NavigationDotWrap from "./NavigationDotWrap";
+import useIsMobile from "../../hooks/useIsMobile";
 
 const SectionWrapper = (Component: any, idName: string, isShowInfo = true) =>
     function HOC() {
+        const isMobile = useIsMobile();
+
         return (
             <div className="flex flex-row w-full padding  mx-auto" id={idName}>
-                {isShowInfo && <SocialWrapper />}
+                {!isMobile && isShowInfo && <SocialWrapper />}
 
                 <motion.div
                     className="flex-1  max-w-7xl relative z-0  mx-auto"
@@ -17,7 +20,7 @@ const SectionWrapper = (Component: any, idName: string, isShowInfo = true) =>
                     <Component />
                 </motion.div>
 
-                {isShowInfo && <NavigationDotWrap />}
+                {!isMobile && isShowInfo && <NavigationDotWrap />}
             </div>
         );
     };
