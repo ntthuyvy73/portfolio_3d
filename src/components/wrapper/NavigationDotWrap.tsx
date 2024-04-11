@@ -7,7 +7,7 @@ const NavigationDotWrap = () => {
     const context = useContext(LinkContext);
 
     return (
-        <div className="flex flex-col gap-7">
+        <div className="flex flex-col gap-7 justify-center">
             {navLinks.map((item, index) => (
                 <>
                     <a

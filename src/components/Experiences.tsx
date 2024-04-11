@@ -4,7 +4,7 @@ import { VerticalTimeline } from "react-vertical-timeline-component";
 import SectionWrapper from "./wrapper/SectionWrapper";
 import { textVariant } from "../utils/motion";
 import { experiences } from "../constants";
-import { ExperienceCard } from ".";
+import { ExperienceCard, Tech } from ".";
 
 import "react-vertical-timeline-component/style.min.css";
 
@@ -23,6 +23,8 @@ const Experiences = () => {
                     ))}
                 </VerticalTimeline>
             </div>
+
+            <Tech />
         </>
     );
 };

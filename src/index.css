@@ -79,6 +79,14 @@
     background: #804dee; /* fallback for old browsers */
 }
 
+.gray-background {
+    background: #333; /* fallback for old browsers */
+}
+
+.orange-background {
+    background: orange;
+}
+
 .canvas-loader {
     width: 1rem;
     height: 1rem;

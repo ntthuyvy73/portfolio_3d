@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { ComputerCanvas } from "./canvas";
+import useIsMobile from "../hooks/useIsMobile";
 
 const Hero = () => {
+    const isMobile = useIsMobile();
     return (
         <section className="w-full relative h-screen flex flex-col ">
             <div className="padding-x absolute inset-0 xl:top-40 top-20 max-w-7xl mx-auto flex items-start  ">
@@ -27,18 +29,17 @@ const Hero = () => {
             <ComputerCanvas />
 
             {/* scroll about */}
-            <a
-                href="#about"
-                className="w-full absolute xs:bottom-10 bottom-3 flex justify-center items-center z-10"
-            >
-                <div className="h-10 w-7 border-2 border-secondary flex justify-center rounded-xl ">
-                    <motion.div
-                        className="w-3 h-3 rounded-full bg-secondary"
-                        animate={{ y: [0, 25, 0] }}
-                        transition={{ duration: 1.5, repeat: Infinity }}
-                    />
-                </div>
-            </a>
+            <div className="w-full absolute md:bottom-10 bottom-32 flex justify-center items-center z-10">
+                <a href="#about">
+                    <div className="h-10 w-7 border-2 border-secondary flex justify-center rounded-xl ">
+                        <motion.div
+                            className="w-3 h-3 rounded-full bg-secondary"
+                            animate={{ y: [0, 25, 0] }}
+                            transition={{ duration: 1.5, repeat: Infinity }}
+                        />
+                    </div>
+                </a>
+            </div>
         </section>
     );
 };

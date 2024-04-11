@@ -8,7 +8,11 @@ const SectionWrapper = (Component: any, idName: string, isShowInfo = true) =>
         const isMobile = useIsMobile();
 
         return (
-            <div className="flex flex-row w-full padding  mx-auto" id={idName}>
+            <section
+                data-section
+                className="flex flex-row w-full padding  mx-auto gap-4"
+                id={idName}
+            >
                 {!isMobile && isShowInfo && <SocialWrapper />}
 
                 <motion.div
@@ -20,8 +24,8 @@ const SectionWrapper = (Component: any, idName: string, isShowInfo = true) =>
                     <Component />
                 </motion.div>
 
-                {!isMobile && isShowInfo && <NavigationDotWrap />}
-            </div>
+                {isShowInfo && <NavigationDotWrap />}
+            </section>
         );
     };
 

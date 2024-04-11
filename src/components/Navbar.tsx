@@ -10,6 +10,8 @@ const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const context = useContext(LinkContext);
 
+    const [activeSection, setActiveSection] = useState(null);
+
     const handleScroll = () => {
         const scrollTop = window.scrollY;
         if (scrollTop < 100) setScrolled(true);
@@ -20,6 +22,37 @@ const Navbar = () => {
 
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+
+    //definition all sections on page
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    //Update state with the visible section ID
+                    setActiveSection(entry.target.id);
+                }
+            });
+        });
+        const sections = document.querySelectorAll("[data-section]"); //get all section with setup data-section => to get id
+
+        sections.forEach((section) => {
+            observer.observe(section);
+        });
+
+        //Cleanup function to remove observer
+        return () => {
+            sections.forEach((section) => {
+                observer.unobserve(section);
+            });
+        };
+    }, []);
+
+    //scroll to section and active link
+    useEffect(() => {
+        console.log(activeSection);
+        if (activeSection) context?.setActiveLink(activeSection);
+        else context?.setActiveLink("");
+    }, [activeSection]);
 
     return (
         <nav

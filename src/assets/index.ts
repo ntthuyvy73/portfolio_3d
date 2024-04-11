@@ -34,6 +34,8 @@ import sql from "./sql.jpg";
 import dotnet from "./dotnet.png";
 import backbone from "./backbone.png";
 import tortoiseSVN from "./tortoiseSVN.jpg";
+import copyright from "./copyright.png";
+import youtube from "./youtube.png";
 
 export {
     logo,
@@ -68,4 +70,6 @@ export {
     dotnet,
     backbone,
     tortoiseSVN,
+    copyright,
+    youtube,
 };

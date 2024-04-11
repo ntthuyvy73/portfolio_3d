@@ -2,8 +2,6 @@ import { Tooltip } from "react-tooltip";
 import { technologies } from "../constants";
 import { BallCanvas } from "./canvas";
 
-import SectionWrapper from "./wrapper/SectionWrapper";
-
 const Tech = () => {
     return (
         <div className="flex flex-wrap justify-center gap-10">
@@ -32,4 +30,4 @@ const Tech = () => {
     );
 };
 
-export default SectionWrapper(Tech, "tech", false);
+export default Tech;

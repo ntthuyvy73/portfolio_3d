@@ -14,6 +14,7 @@ type ProjectCardProps = {
     tags: TagProps[];
     image: string;
     source_code_link: string;
+    allTags: TagProps[];
 };
 
 const ProjectCard = ({
@@ -23,6 +24,7 @@ const ProjectCard = ({
     tags,
     image,
     source_code_link,
+    allTags,
 }: ProjectCardProps) => {
     return (
         <Tilt className="bg-tertiary sm:w-[300px] w-full rounded-2xl relative">
@@ -56,14 +58,20 @@ const ProjectCard = ({
                 </div>
 
                 <div className="flex flex-wrap gap-5 pt-10  ">
-                    {tags.map((item, index) => (
-                        <div
-                            key={`tag-${index}`}
-                            className={`${item.color} p-1 rounded-md`}
-                        >
-                            {item.name}
-                        </div>
-                    ))}
+                    {tags.map((item, index) => {
+                        const result = allTags.filter(
+                            (m) => m.name === item.name
+                        );
+                        return (
+                            <div
+                                key={`tag-${index}`}
+                                className={`bg-${result?.[0]?.color}-500 py-1 px-2 rounded-md`}
+                                style={{ backgroundColor: result?.[0]?.color }}
+                            >
+                                {item.name}
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </Tilt>

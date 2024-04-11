@@ -7,7 +7,7 @@ import { ServiceCard } from ".";
 
 const About = () => {
     return (
-        <section>
+        <>
             <motion.div variants={textVariant()}>
                 <p className="sub-text">Introduce</p>
                 <h2 className="head-text">Overview</h2>
@@ -33,7 +33,7 @@ const About = () => {
                     />
                 ))}
             </div>
-        </section>
+        </>
     );
 };
 

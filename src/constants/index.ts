@@ -11,22 +11,18 @@ import {
     // redux,
     tailwind,
     nodejs,
-    //  mongodb,
     git,
     figma,
-    //  docker,
     meta,
-    //   starbucks,
     tesla,
-    //   shopify,
     carrent,
-    jobit,
-    tripguide,
     threejs,
     dotnet,
     sql,
     backbone,
     tortoiseSVN,
+    copyright,
+    youtube,
 } from "../assets";
 
 export const navLinks = [
@@ -218,11 +214,11 @@ const projects = [
             "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
         tags: [
             {
-                name: "react",
+                name: "nextjs",
                 color: "green-background",
             },
             {
-                name: "mongodb",
+                name: "typescript",
                 color: "pink-background ",
             },
             {
@@ -231,7 +227,7 @@ const projects = [
             },
         ],
         image: carrent,
-        source_code_link: "https://github.com/",
+        source_code_link: "https://github.com/ntthuyvy73/car.git",
     },
     {
         name: "Clone Youtube",
@@ -242,16 +238,20 @@ const projects = [
                 color: "green-background",
             },
             {
-                name: "restapi",
+                name: "rapidapi",
                 color: "pink-background ",
             },
             {
-                name: "scss",
+                name: "axios",
+                color: "gray-background",
+            },
+            {
+                name: "mui",
                 color: "violet-background",
             },
         ],
-        image: jobit,
-        source_code_link: "https://github.com/",
+        image: youtube,
+        source_code_link: "https://github.com/ntthuyvy73/youtube_clone.git",
     },
     {
         name: "Enrollment",
@@ -262,8 +262,12 @@ const projects = [
                 color: "green-background",
             },
             {
-                name: "backbone",
+                name: "sql",
                 color: "pink-background ",
+            },
+            {
+                name: "backbone",
+                color: "orange-background ",
             },
             {
                 name: "bootstrap",
@@ -271,10 +275,10 @@ const projects = [
             },
             {
                 name: "javascript",
-                color: "violet-background",
+                color: "gray-background",
             },
         ],
-        image: tripguide,
+        image: copyright,
         source_code_link: "",
     },
 
@@ -296,10 +300,10 @@ const projects = [
             },
             {
                 name: "javascript",
-                color: "violet-background",
+                color: "orange-background",
             },
         ],
-        image: tripguide,
+        image: copyright,
         source_code_link: "",
     },
 
@@ -314,22 +318,22 @@ const projects = [
             },
             {
                 name: "wpf",
-                color: "green-background",
+                color: "pink-background",
             },
             {
                 name: "sql",
-                color: "pink-background ",
+                color: "violet-background ",
             },
             {
                 name: "css",
-                color: "violet-background",
+                color: "orange-background",
             },
             {
                 name: "javascript",
-                color: "violet-background",
+                color: "gray-background",
             },
         ],
-        image: tripguide,
+        image: copyright,
         source_code_link: "",
     },
 
@@ -352,14 +356,14 @@ const projects = [
             },
             {
                 name: "css",
-                color: "violet-background",
+                color: "orange-background",
             },
             {
                 name: "javascript",
-                color: "violet-background",
+                color: "gray-background",
             },
         ],
-        image: tripguide,
+        image: copyright,
         source_code_link: "",
     },
 
@@ -382,14 +386,14 @@ const projects = [
             },
             {
                 name: "css",
-                color: "violet-background",
+                color: "gray-background",
             },
             {
                 name: "javascript",
-                color: "violet-background",
+                color: "orange-background",
             },
         ],
-        image: tripguide,
+        image: copyright,
         source_code_link: "",
     },
 ];
