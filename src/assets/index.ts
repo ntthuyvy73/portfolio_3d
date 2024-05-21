@@ -36,6 +36,7 @@ import backbone from "./backbone.png";
 import tortoiseSVN from "./tortoiseSVN.jpg";
 import copyright from "./copyright.png";
 import youtube from "./youtube.png";
+import overflow from "./overflow.png";
 
 export {
     logo,
@@ -72,4 +73,5 @@ export {
     tortoiseSVN,
     copyright,
     youtube,
+    overflow,
 };

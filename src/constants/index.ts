@@ -23,6 +23,7 @@ import {
     tortoiseSVN,
     copyright,
     youtube,
+    overflow,
 } from "../assets";
 
 export const navLinks = [
@@ -208,6 +209,34 @@ const testimonials = [
 ];
 
 const projects = [
+    {
+        name: "Overflows",
+        description:
+            "Website that allows users to search, ask question, answer and vote.",
+        tags: [
+            {
+                name: "nextjs",
+                color: "black-gradient",
+            },
+            {
+                name: "typescript",
+                color: "pink-background",
+            },
+            {
+                name: "tailwindcss",
+                color: "violet-background",
+            },
+            {
+                name: "shadcn/ui",
+                color: "orange-background",
+            },
+        ],
+        image: overflow,
+        source_code_link:
+            "https://vy-overflow-3ab5sfgry-ntthuyvy73s-projects.vercel.app/",
+        deploy_link:
+            "https://vy-overflow-3ab5sfgry-ntthuyvy73s-projects.vercel.app/",
+    },
     {
         name: "Car Rent",
         description:

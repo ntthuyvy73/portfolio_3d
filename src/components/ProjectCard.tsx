@@ -14,6 +14,7 @@ type ProjectCardProps = {
     tags: TagProps[];
     image: string;
     source_code_link: string;
+    deploy_link?: string;
     allTags: TagProps[];
 };
 
@@ -24,6 +25,7 @@ const ProjectCard = ({
     tags,
     image,
     source_code_link,
+    deploy_link,
     allTags,
 }: ProjectCardProps) => {
     return (
@@ -53,7 +55,9 @@ const ProjectCard = ({
 
             <div className="p-5 ">
                 <div className="">
-                    <h3 className="text-[24px] font-bold">{name}</h3>
+                    <a href={deploy_link} target="_blank">
+                        <h3 className="text-[24px] font-bold">{name}</h3>
+                    </a>
                     <p className="p-text">{description}</p>
                 </div>
 
