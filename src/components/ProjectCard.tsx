@@ -58,7 +58,10 @@ const ProjectCard = ({
                     <a href={deploy_link} target="_blank">
                         <h3 className="text-[24px] font-bold">{name}</h3>
                     </a>
-                    <p className="p-text">{description}</p>
+                    <p
+                        className="p-text"
+                        dangerouslySetInnerHTML={{ __html: description }}
+                    ></p>
                 </div>
 
                 <div className="flex flex-wrap gap-5 pt-10  ">

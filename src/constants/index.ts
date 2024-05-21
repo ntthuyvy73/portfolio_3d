@@ -212,7 +212,7 @@ const projects = [
     {
         name: "Overflows",
         description:
-            "Website that allows users to search, ask question, answer and vote.",
+            "Website that allows users to search, ask question, answer and vote. <br/>- Use Clerk to login or sign up by email/github/google. <br/>- Use Shadcn/ui and tailwindcss to design. <br/>- Use context to aplly theme Light/Dark",
         tags: [
             {
                 name: "nextjs",
@@ -229,6 +229,10 @@ const projects = [
             {
                 name: "shadcn/ui",
                 color: "orange-background",
+            },
+            {
+                name: "clerk",
+                color: "green-pink-gradient",
             },
         ],
         image: overflow,
